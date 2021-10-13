@@ -61,7 +61,6 @@ func main() {
 			for {
 				err := remoteAddNewDevEui(client, devEui)
 				if err == devEuiAlreadyRegistered {
-					// what shall we do on another error?
 					retries++
 					// TODO: this is not going to generate one with a unique last few chars
 					devEui = generateDevEui()
